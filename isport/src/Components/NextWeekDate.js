@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { setClickedData } from '../Redux/DateTransfer/DateTransfer_';
 import { useDispatch } from 'react-redux'
-import AddSuffix from './AddSuffix';
 const NextWeekDates = () => {
     const [nextWeekDates, setNextWeekDates] = useState();
     const [active, setActive] = useState([]);
@@ -14,7 +13,6 @@ const NextWeekDates = () => {
             const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
             for (let i = 0; i < 7; i++) {
                 const nextDate = new Date(today.getFullYear(), today.getMonth(), today.getDate() + i);
-                // nextWeekDatesArray.push(nextDate.toLocaleDateString('en-GB', options));
                 var parts = nextDate.toLocaleDateString('en-GB', options).split('/');
                 var day = new Date(parts[2], parts[0] - 1, parts[1]).toLocaleDateString('en-US', { weekday: 'short' });
                 var date = parseInt(parts[1], 10) - 1;
@@ -66,9 +64,6 @@ const NextWeekDates = () => {
 
                         });
                 }
-
-
-
             }
 
             return nextWeekDatesArray;
@@ -87,8 +82,8 @@ const NextWeekDates = () => {
             <div className='container-fluid d-flex child-btn-grp'>
                 {nextWeekDates?.map((item, index) => (
                     <span
-                        className={`filter-btn rounded-5 ${index === active ? "active-btn text-light" : "in-active"
-                            } mx-2 mt-1`}
+                        className={`filter-btn py-1 rounded-5 ${index === active ? "active-btn text-light" : "in-active"
+                            } mx-1 mt-1`}
                         key={index}
                         onClick={() => handlClick(item.toShow, index)}
                     >

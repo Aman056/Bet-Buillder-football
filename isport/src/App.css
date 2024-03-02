@@ -3,10 +3,51 @@
   --secondary: #000000;
 }
 
+/* For Small screen --------Mobile */
+@media (max-width: 768px) {
+
+  .filter-btn-group {
+    overflow: hidden;
+    display: flex;
+    /* justify-content: flex; */
+    justify-content: flex-start;
+    margin: auto;
+
+
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .selection-dropdown {
+    width: auto;
+  }
+
+  .responsive-table th,
+  .responsive-table td {
+    padding: 6px;
+    cursor: pointer;
+  }
+
+
+ 
+
+  .responsive-table-container {
+    overflow-x: auto;
+    width: 100%;
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 15px;
+  }
+ 
+  .container-fluid-Modify {
+    width: 100%;
+  }
+}
+
 .bi-arrow-left-circle-fill {
   color: var(--primary);
 }
-.builder-text{
+
+.builder-text {
   color: var(--primary);
   font-family: fantasy;
 }
@@ -15,16 +56,80 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* For ipad mini and ipad air --------->*/
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+
+  .filter-btn-group {
+    display: flex;
+    justify-content: end;
+    width: 80%;
+    padding-left: 23rem;
+    margin: auto;
+    /* border: 1px solid red; */
+
+
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .child-btn-grp {
+    justify-content: center;
+  }
+
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* For All Desktop And laptop Screens --------->*/
+
+@media (min-width: 780px) {
+  .filter-btn-group::-webkit-scrollbar {
+    display: none;
   }
+
+  .container-fluid-Modify {
+    width: 50%;
+  }
+  .responsive-table-container {
+    overflow-x: auto;
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 15px;
+    width: 50%;
+  }
+
+
+  .football {
+    width: 50%;
+    display: flex;
+    justify-content: start;
+    text-align: center;
+  }
+
+  .dropdown {
+    max-width: calc(100vw - 20px);
+    overflow-x: auto;
+  }
+
+  .group-dropdown {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .filter-btn-group {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .child-btn-grp {
+    justify-content: center;
+  }
+
 }
+
+
 
 .App-header {
   background-color: #282c34;
@@ -39,16 +144,6 @@
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 
@@ -77,63 +172,8 @@ thead tr {
   cursor: pointer;
 }
 
-.responsive-table-container {
-  overflow-x: auto;
-  border: 1px solid rgb(190, 190, 190);
-  border-radius: 15px;
-  width: 50%;
-}
 
-.container-fluid-Modify {
-  width: 50%;
-}
 
-/* Responsive styling */
-@media (max-width: 768px) {
-
-  .filter-btn-group {
-    overflow: hidden;
-    display: flex;
-    /* justify-content: flex; */
-    justify-content: flex-start;
-    margin: auto;
-   
-
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-
-  .selection-dropdown {
-    width: auto;
-  }
-
-  .responsive-table th,
-  .responsive-table td {
-    padding: 6px;
-    cursor: pointer;
-  }
-
-  .responsive-table-container {
-    overflow-x: auto;
-    width: 100%;
-    border: 1px solid rgb(190, 190, 190);
-    border-radius: 15px;
-  }
-
-  .container-fluid-Modify {
-    width: 100%;
-  }
-}
-
-/* 
-.team-match {
-  border: 2px solid rgb(186, 186, 186);
-  border-radius: 10px;
-  margin: auto;
-  width: auto;
-  max-width: 20rem;
-  padding: 1rem;
-} */
 
 .group-dropdown {
   display: flex;
@@ -142,10 +182,6 @@ thead tr {
   margin: auto;
 }
 
-.group-dropdown {
-  display: flex;
-  flex-direction: column;
-}
 
 .dropdown {
   width: 100%;
@@ -155,46 +191,6 @@ thead tr {
   border: 1px solid #ccc;
   font-size: 16px;
   /* overflow: hidden; */
-}
-
-@media (min-width: 768px) {
-  .filter-btn-group::-webkit-scrollbar {
-    display: none;
-  }
-
-  .football{
-    width: 50%;
-    display: flex;
-    justify-content: start;
-    text-align: center;
-  }
-  .dropdown {
-    max-width: calc(100vw - 20px);
-    /* Adjust as needed to account for margins and padding */
-    overflow-x: auto;
-    /* Enable horizontal scrolling if needed */
-  }
-
-  .group-dropdown {
-    flex-direction: row;
-    align-items: flex-start;
-    /* Ensures dropdowns align at the top */
-  }
-
-  .filter-btn-group {
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    /* border: 1px solid red; */
-
-
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-  .child-btn-grp{
-    justify-content: center;
-  }
-
 }
 
 /* Light green header */
@@ -234,11 +230,11 @@ thead tr {
   cursor: pointer;
 }
 
-tbody tr{
+tbody tr {
   cursor: pointer;
 }
 
-tbody tr:hover{
+tbody tr:hover {
   cursor: pointer;
   background-color: #d8d8d8;
 }
@@ -274,7 +270,7 @@ tbody tr:hover{
 }
 
 .in-active {
-  background-color: #d0d0d0;
+  background-color: #e0e0e0;
   cursor: pointer;
 }
 
@@ -308,4 +304,8 @@ tbody tr:hover{
 
 .leg-dropdown {
   /* width: 5rem; */
+}
+
+.team-match{
+  width: 54%;
 }

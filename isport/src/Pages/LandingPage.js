@@ -49,63 +49,41 @@ export default function LandingPage() {
             setSearchResult(data?.data)
         }
     }, [formattedDate, data.data]);
+
     const renderRows = () => {
-        if (searchResult !== undefined) {
-            return searchResult?.slice(0, displayCount).map((item, index) => (
-                <table className='w-100 mt-3' key={index}>
-                    <thead>
-                        <tr >
-                            <span className='w-100 py-2 text-light'>     {item.Country}{item.Country && " - "}{item.LeagueName}</span>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-
-                            <td className='py-3 pointer-event' onClick={() => handleClick(item)}>
-                                <span>   {item?.Team1Name}  </span>
-                                <span className='text-secondary'> {item?.MatchTime}</span>
-                                <span>  {item.Team2Name}</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            ));
-        }
-        else {
-            return data?.data?.slice(0, displayCount).map((item, index) => (
-                <table className='w-100 mt-3' key={index}>
-                    <thead>
-                        <tr >
-                            <span className='w-100 py-2 text-light'>     {item.Country}{item.Country && " - "}{item.LeagueName}</span>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-
-                            <td className='py-3' onClick={() => handleClick(item)}>
-                                <span>   {item?.Team1Name}  </span>
-                                <span className='text-secondary'> {item?.MatchTime}</span>
-                                <span>  {item.Team2Name}</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            ));
-        }
+        return (searchResult || data?.data)?.slice(0, displayCount).map((item, index) => (
+            <table className='w-100 mt-3' key={index}>
+                <thead>
+                    <tr>
+                        <span className='w-100 py-2 text-light'>{item.Country}{item.Country && " - "}{item.LeagueName}</span>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td className='py-3 pointer-event' onClick={() => handleClick(item)}>
+                            <span>{item?.Team1Name}</span>
+                            <span className='text-secondary'>{item?.MatchTime}</span>
+                            <span>{item.Team2Name}</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        ));
     };
+
     return (
-        <div>
-            <h3 className='my-3'>TeamSportsData</h3>
+        <div className='px-3'>
+            <h3 className='my-3'>Team Sports Data</h3>
             <div className=' d-flex justify-content-center'>
                 <NextWeekDate />
             </div>
             {data.status === 'loading' && "Loading...."}
             <div className='mt-4 w-100'>
                 <div className='container-fluid text-start my-1 football '>
-                    <img src={img} className='' height={'14px'} width={'14px'} />
+                    <img src={img} className='' height={'14px'} width={'14px'} alt='football' />
                     <span className='mx-2'><b>Football</b></span>
                 </div>
-                <div className="responsive-table-container container-fluid ">
+                <div className="responsive-table-container  m-auto p-0 ">
                     {renderRows()}
                 </div>
             </div>
@@ -121,7 +99,6 @@ export default function LandingPage() {
                         </tfoot>
                     )}
                 </div>
-
             </div>
         </div>
     )
