@@ -1,0 +1,311 @@
+:root {
+  --primary: #ed3535;
+  --secondary: #000000;
+}
+
+.bi-arrow-left-circle-fill {
+  color: var(--primary);
+}
+.builder-text{
+  color: var(--primary);
+  font-family: fantasy;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+thead tr {
+  background-color: var(--primary);
+  padding: 10px;
+}
+
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.responsive-table th,
+.responsive-table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.responsive-table tr:hover {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+  background: #dedede;
+  cursor: pointer;
+}
+
+.responsive-table-container {
+  overflow-x: auto;
+  border: 1px solid rgb(190, 190, 190);
+  border-radius: 15px;
+  width: 50%;
+}
+
+.container-fluid-Modify {
+  width: 50%;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+
+  .filter-btn-group {
+    overflow: hidden;
+    display: flex;
+    /* justify-content: flex; */
+    justify-content: flex-start;
+    margin: auto;
+   
+
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .selection-dropdown {
+    width: auto;
+  }
+
+  .responsive-table th,
+  .responsive-table td {
+    padding: 6px;
+    cursor: pointer;
+  }
+
+  .responsive-table-container {
+    overflow-x: auto;
+    width: 100%;
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 15px;
+  }
+
+  .container-fluid-Modify {
+    width: 100%;
+  }
+}
+
+/* 
+.team-match {
+  border: 2px solid rgb(186, 186, 186);
+  border-radius: 10px;
+  margin: auto;
+  width: auto;
+  max-width: 20rem;
+  padding: 1rem;
+} */
+
+.group-dropdown {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  margin: auto;
+}
+
+.group-dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  /* overflow: hidden; */
+}
+
+@media (min-width: 768px) {
+  .filter-btn-group::-webkit-scrollbar {
+    display: none;
+  }
+
+  .football{
+    width: 50%;
+    display: flex;
+    justify-content: start;
+    text-align: center;
+  }
+  .dropdown {
+    max-width: calc(100vw - 20px);
+    /* Adjust as needed to account for margins and padding */
+    overflow-x: auto;
+    /* Enable horizontal scrolling if needed */
+  }
+
+  .group-dropdown {
+    flex-direction: row;
+    align-items: flex-start;
+    /* Ensures dropdowns align at the top */
+  }
+
+  .filter-btn-group {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    /* border: 1px solid red; */
+
+
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .child-btn-grp{
+    justify-content: center;
+  }
+
+}
+
+/* Light green header */
+.thead-light-green th {
+  background-color: rgb(238, 238, 238);
+
+}
+
+/* Light green outline borders */
+.table {
+  background-color: #ebebeb;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.table th {
+  text-align: left;
+  padding-left: 1rem;
+  color: var(--primary);
+  /* border: 1px solid rgb(92, 201, 92); */
+  /* color: var(--primary); */
+}
+
+.table td {
+  border: 1px solid rgb(194, 194, 194);
+}
+
+.table tr:nth-child(even) {
+  background-color: #f2f2f2;
+  cursor: pointer;
+  /* Even row background color */
+}
+
+.table tr:nth-child(odd) {
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+tbody tr{
+  cursor: pointer;
+}
+
+tbody tr:hover{
+  cursor: pointer;
+  background-color: #d8d8d8;
+}
+
+/* Responsive styling */
+.table-responsive {
+  overflow-x: auto;
+}
+
+.header {
+  height: auto;
+  padding: 1rem;
+
+  border-bottom: 1px solid gray;
+}
+
+.container-date {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.active-btn {
+  background-color: var(--primary);
+  border: none;
+  cursor: pointer;
+}
+
+.active-btn:hover {
+  background-color: var(--primary);
+  border: none;
+  cursor: pointer;
+}
+
+.in-active {
+  background-color: #d0d0d0;
+  cursor: pointer;
+}
+
+
+.filter-btn {
+  /* border: 2px solid black; */
+  min-width: 8rem;
+  max-width: 5rem;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.make-it-bet-builder-section {
+  background-color: var(--primary);
+  color: #ffff;
+  font-weight: 600;
+  /* font */
+
+}
+
+.Gradient-div {
+  display: flex;
+  justify-content: space-between;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(320deg, rgba(0, 0, 0, 1) 61%, rgba(255, 0, 0, 1) 41%);
+}
+
+
+
+.leg-dropdown {
+  /* width: 5rem; */
+}

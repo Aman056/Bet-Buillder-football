@@ -1,0 +1,1 @@
+export const BASEURL = "http://cms.bettorlogic.com/api/BetBuilder/"
