@@ -1,6 +1,6 @@
 :root {
   --primary: #ed3535;
-  --secondary: #000000;
+  --secondary: #000000e3;
 }
 
 /* For Small screen --------Mobile */
@@ -297,7 +297,7 @@ tbody tr:hover {
   display: flex;
   justify-content: space-between;
   background: rgb(0, 0, 0);
-  background: linear-gradient(320deg, rgba(0, 0, 0, 1) 61%, rgba(255, 0, 0, 1) 41%);
+  background: linear-gradient(320deg, var(--secondary) 61%, var(--primary) 41%);
 }
 
 

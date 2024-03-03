@@ -17,7 +17,7 @@ export default function MatchInfo() {
     const location = useLocation();
     const dispatch = useDispatch();
     const data = location.state.data;
-
+console.log(data)
     useEffect(() => {
         dispatch(MarketApi())
         dispatch(LegsApi())
@@ -27,6 +27,7 @@ export default function MatchInfo() {
         const data = e.target
         setSelected_Data({ ...selected_Data, [data.name]: data.value })
     }
+
     useEffect(() => {
         const Data_top_Post = {
             "matchId": data?.MatchId,
@@ -51,7 +52,7 @@ export default function MatchInfo() {
                 <h4 className='py-3 px-4'>Make it a Bet Builder?</h4>
             </div>
             <div className='Gradient-div py-3'>
-                <div className='text-light w-25 fw-bolder pt-2'>{<ConvertDateTime inputDateTime={data.KickOffUtc} />}</div>
+                <div className='text-light w-25 fw-bolder pt-2'>{<ConvertDateTime inputDateTime={data.MatchDate} />}</div>
                 <div className='team-match text-light'>
                     <h6 className='fw-medium m-0'>{data.MatchName.toUpperCase()}</h6>
                     <span className='m-0 fs-6 text-end'> {data?.Country} - {data?.LeagueName}</span>
@@ -59,7 +60,6 @@ export default function MatchInfo() {
                 </div>
             </div>
             <div className='container'>
-
                 <span className='text-danger mt-5'>{BetBuilderData?.error}</span>
                 <div className='group-dropdown mt-3  w-100 p-0'>
 
@@ -80,7 +80,6 @@ export default function MatchInfo() {
                             ))}
                         </select>
                     </div>
-
                 </div>
                 <div className='container  p-0'>
                     {BetBuilderData.status === 'loading' && 'Loading.....'}

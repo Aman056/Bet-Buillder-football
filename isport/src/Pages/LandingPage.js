@@ -20,6 +20,7 @@ export default function LandingPage() {
     }, [dispatch])
     const handleClick = (data) => {
         navigate('/match-info', { state: { data } })
+        // console.log(data)
     }
 
     const formattedDate = dateForFilter?.clickedData?.split("/").join("/");

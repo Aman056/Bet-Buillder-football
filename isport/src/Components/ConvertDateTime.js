@@ -10,6 +10,4 @@ export default function ConvertDateTime({ inputDateTime }) {
     const formattedMinute = minute.padStart(2, '0');
     const formattedTime = `${formattedHour}:${formattedMinute}`;
     return `${monthName} ${day} ${year} ${formattedTime}`;
-
-
 }
